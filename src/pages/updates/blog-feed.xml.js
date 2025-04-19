@@ -8,8 +8,8 @@ export async function GET(context) {
 			return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
 		});
 	return rss({
-		title: "Revolt Blog",
-		description: "Feed of Revolt blog posts.",
+		title: "TrueVolt Blog",
+		description: "Feed of TrueVolt blog posts.",
 		site: context.site,
 		trailingSlash: false,
 		items: blogEntries.map((entry) => ({
