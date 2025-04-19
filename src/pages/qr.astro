@@ -14,7 +14,7 @@ type UserQRData = {
 }
 
 let error: String | null = null
-let title = "Revolt"
+let title = "TrueVolt"
 let data: UserQRData | null = null
 let noDisplayName = false
 
@@ -34,7 +34,7 @@ try {
     }
 
     noDisplayName = data.displayName === "01JDZRDD1YZ84HA8EST2E5GVXT" // Sentinel value
-    title = `${noDisplayName ? data.username : data.displayName} is on Revolt`
+    title = `${noDisplayName ? data.username : data.displayName} is on TrueVolt`
 } catch (e: any) {
     error = e.message
 }
@@ -55,7 +55,7 @@ try {
         ) : (
             <div class="lr-pad">
                 <img
-                    src={`https://autumn.revolt.chat/avatars/${data?.avatar}?max_side=256`}
+                    src={`https://TrueVolt-autumn.ErrorOliver.lol/avatars/${data?.avatar}?max_side=256`}
                     alt={
                         ((noDisplayName ? data?.username : data?.displayName) ??
                             "User") +
@@ -66,15 +66,15 @@ try {
                 <h1 class="displayname">{title}</h1>
                 <h2 class="tag">
                     <!-- prettier-ignore -->
-                    {data?.username}<span class="discriminator">#{data?.discriminator}</span>
+                    {data?.username}<span class="domain">#{data?.discriminator}</span> <!-- Replace discriminator with domain federation when ready -->
                 </h2>
                 <p>
-                    Join them on Revolt by scanning this QR code with the Revolt Android and iOS apps or on the web.
+                    Join them on Revolt by scanning this QR code with the TrueVolt Android and iOS apps or on the web.
                 </p>
                 
                 <p style="opacity: 0.7">
-                    Revolt is the chat app that's built with you in mind. It's built for everyone from friends to communities,
-                    and it's open-source and free to use.
+                    TrueVolt is the chat app that's built with you in mind. It's built for everyone from friends to communities,
+                    and it's open-source and free to use. Forked from Revolt with some nifty features.
                 </p>
 
                 <div class="middle">
@@ -117,7 +117,7 @@ try {
         margin-top: 0;
         margin-bottom: 3rem;
 
-        .discriminator {
+        .domain {
             font-weight: 200;
         }
     }
